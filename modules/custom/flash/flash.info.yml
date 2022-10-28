@@ -1,0 +1,7 @@
+name: Flash
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: Le Flash Info
+dependencies:
+  - drupal:block

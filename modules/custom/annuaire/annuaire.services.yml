@@ -1,0 +1,3 @@
+services:
+  annuaire.service:
+    class: Drupal\annuaire\Service\AnnuaireService

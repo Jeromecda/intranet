@@ -1,0 +1,15 @@
+<?php 
+
+/**
+ * Implements hook_theme().
+ */
+function annuaire_theme($existing, $type, $theme, $path) {
+  return [
+    'annuaire' => [
+      'variables' => [
+        'services' => [],
+        'data' => [],
+    ],
+    ],
+  ];
+}

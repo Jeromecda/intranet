@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function doc_chic_theme($existing, $type, $theme, $path) {
+  return [
+    'doc_chic' => [
+      'variables' => ['var' => NULL],
+    ],
+  ];
+}

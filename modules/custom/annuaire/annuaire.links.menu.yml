@@ -1,0 +1,5 @@
+# annuaire.page_menu:
+#   title: 'Annuaire'
+#   description: 'lien vers annuaire'
+#   route_name: annuaire.page
+#   menu_name: main

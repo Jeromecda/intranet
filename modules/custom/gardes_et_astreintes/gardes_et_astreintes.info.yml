@@ -1,0 +1,7 @@
+name: Les Gardes et Astreintes
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: Les Gardes et Astreintes de l'hôpital
+dependencies:
+  - drupal:block

@@ -1,0 +1,7 @@
+name: Le CHIC
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: Le CHIC
+dependencies:
+  - drupal:block

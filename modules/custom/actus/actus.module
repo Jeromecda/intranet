@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function actus_theme($existing, $type, $theme, $path) {
+  return [
+    'actus_template' => [
+      'variables' => ['test_var' => NULL],
+    ],
+  ];
+}

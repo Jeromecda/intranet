@@ -1,0 +1,7 @@
+name: Documentation du CHIC
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: La documentation du CHIC
+dependencies:
+  - drupal:block

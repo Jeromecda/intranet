@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ressources_humaines_theme($existing, $type, $theme, $path) {
+  return [
+    'ressources_humaines' => [
+      'variables' => [
+        'var' => NULL,
+      ],
+    ],
+  ];
+}

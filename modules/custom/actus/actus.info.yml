@@ -1,0 +1,7 @@
+name: Actus
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: Afficher les actualités et les événements
+dependencies:
+  - drupal:block

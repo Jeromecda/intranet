@@ -1,0 +1,7 @@
+annuaire.page:
+  path: /annuaire
+  defaults: 
+    _controller: '\Drupal\annuaire\Controller\AnnuaireController::Start'
+    _title: 'Annuaire'
+  requirements:
+    _permission: 'access content'

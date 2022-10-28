@@ -1,0 +1,147 @@
+{# annuaire/templates/my-template.html.twig #}
+<div class="mt-3 p-1" style="border:1px solid #ccc;">
+	<form id="formulaire">
+		<div class="row" style="width:95%;">
+			{# FORMULAIRE #}
+			<div class="col-3 pt-3">
+                <h1>L'Annuaire du CHIC</h1>
+				{# SERVICE #}
+				<div class="mb-3 mt-3">
+					<label for="service" class="form-label">Service</label>
+					<select class="form-select" aria-label="Default select example" id="service">
+						<option selected></option>
+                        {% for service in services %}
+						<option value="{{ service.nom }}" class="selectService">{{ service.nom }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				{# FONCTION #}
+				<div class="mb-3">
+					<label for="fonction" class="form-label">Fonction</label>
+					<select class="form-select" aria-label="Default select example" id="fonction">
+						<option selected></option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+				{# NOM / PRENOM #}
+				<div class="mb-3">
+					<label for="nomPrenom" class="form-label">Nom / Prénom</label>
+					<input type="text" class="form-control" id="nomPrenom">
+				</div>
+				{# NUMERO #}
+				<div class="mb-3">
+					<label for="numero" class="form-label">Numéro</label>
+					<input type="text" class="form-control" id="numero">
+				</div>
+				{# PÔLE #}
+				<div class="mb-3">
+					<label for="pole" class="form-label">Pôle</label>
+					<select class="form-select" aria-label="Default select example" id="pole">
+						<option selected></option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+				{# BÂTIMENT #}
+				<div class="mb-3">
+					<label for="batiment" class="form-label">Bâtiment</label>
+					<select class="form-select" aria-label="Default select example" id="batiment">
+						<option selected></option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+				{# ETAGE #}
+				<div class="mb-3">
+					<label for="etage" class="form-label">Étage</label>
+					<select class="form-select" aria-label="Default select example" id="etage">
+						<option selected></option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+                {# RECHERCHER #}
+                <div class="row">
+                    <div class="col mt-3 d-flex justify-content-start">
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                        <button type="submit" class="btn btn-danger boutonEffacer">Effacer</button>
+                    </div>
+                </div>
+			</div>
+    </form>
+			{# TABLEAU #}
+			<div class="col-8 offset-1 pt-3">
+                <div class="row">
+                    {# BOUTONS #}
+                    <div class="pt-3 d-flex justify-content-center align-items-center">
+                        <a class="btn btn-success mb-3" href="http://192.168.10.4:8080/Annuaire/PosteIP/Labels_53xx.pdf" target="_blank">Planche d'étiquettes</a>
+                        <a class="btn btn-success mb-3" href="#">Codes des fonctions téléphoniques</a>
+                        <a class="btn btn-success mb-3" href="http://192.168.10.4:8080/Annuaire/Manuel%20d62.pdf" target="_blank">Manuel DECT</a>
+                        <a class="btn btn-success mb-3" href="#">Notices téléphones</a>
+                        <a class="btn btn-success mb-3" href="https://www.pagesjaunes.fr/pagesblanches?portail=PJ" target="_blank">Pages Blanches / Pages jaunes</a>
+                    </div>
+                    {# ONGLETS #}
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link  permanencesDesSoins" style="cursor:pointer;color:#000;">Permanences des soins</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link numerosUsuels" style="cursor:pointer;color:#000;">Numéros usuels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link numerosAbreges" style="cursor:pointer;color:#000;">Numéros abrégés</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link infos" style="cursor:pointer;color:#000;">Infos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link procedureDect" style="cursor:pointer;color:#000;">Procédure dégradée panne dect</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link numerosSecours" style="cursor:pointer;color:#000;">Numéros de Secours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link gipGie" style="cursor:pointer;color:#000;">GIP/GIE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link efs" style="cursor:pointer;color:#000;">EFS</a>
+                        </li>
+                    </ul>
+                </div>
+                {# AFFICHAGE DES TABLEAUX CORRESPONDANTS AUX ONGLETS #}
+                <div class="divPermanencesDesSoins">
+                    {% include '/modules/custom/annuaire/templates/permanencesDesSoins.html.twig' %}
+                </div>
+                <div class="divNumerosUsuels" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/numerosUsuels.html.twig' %}
+                </div>
+                <div class="divNumerosAbreges" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/numerosAbreges.html.twig' %}
+                </div>
+                <div class="divInfos" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/infos.html.twig' %}
+                </div>
+                <div class="divProcedureDect" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/procedureDect.html.twig' %}
+                </div>
+                <div class="divNumerosSecours" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/numerosSecours.html.twig' %}
+                </div>
+                <div class="divGipGie" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/gipgie.html.twig' %}
+                </div>
+                <div class="divEfs" style="display:none;">
+                    {% include '/modules/custom/annuaire/templates/efs.html.twig' %}
+                </div>
+			</div>
+            
+		</div>
+	
+</div>
+
+<script src="modules/custom/annuaire/js/script.js"></script>

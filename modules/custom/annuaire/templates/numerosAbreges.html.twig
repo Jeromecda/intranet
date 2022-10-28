@@ -1,0 +1,53 @@
+<h2 class="mt-3">Numérotations abrégées</h2>
+<ul>
+    <li><a href="">Centres hospitaliers, centres hospitaliers régionaux, établissements participant au service public hospitaler (PSPH)</a></li>
+    <li><a href="">Maisons de retraite, foyers logements</a></li>
+    <li><a href="">Cliniques</a></li>
+    <li><a href="">Laboratoires d'analyse de biologie médicale</a></li>
+    <li><a href="">Établissements de cure, prévention, réadaptation, maisons de santé de repos et de convelescence</a></li>
+    <li><a href="">Associations</a></li>
+    <li><a href="">Administrations - Institutions</a></li>
+</ul>
+<hr>
+<h3>Centres hospitaliers, 
+Centres hospitaliers régionaux,
+Établissements participant au service public hospitaler (PSPH)</h3>
+{% for centre in centres %}
+    <p>{{ centre.nom }}</p>
+{% endfor %}
+{{ page.numerosAbreges('numerosAbreges') }}
+{# <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Ville</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Numéro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dinan</td>
+            <td>Centre Hospitalier René Pléven</td>
+            <td>* 3007</td>
+        </tr>
+    </tbody>
+</table> #}
+
+<h3>Maisons de retraite, foyers logements</h3>
+<h4 class="text-center">Finistère</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Ville</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Numéro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Arzano</td>
+            <td>MAPA - Résidence Soleil Levant</td>
+            <td>* 3039</td>
+        </tr>
+    </tbody>
+</table>

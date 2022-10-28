@@ -1,0 +1,26 @@
+<h3 class="mt-3">GIP/GIE</h3>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Pôle et Service</th>
+            <th scope="col">Numéros</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for service in services %}
+        <tr>
+            <td><strong>{{ service.nom }}</strong></td>
+            <td>
+                <strong>{{ service.numeroCourt }}</strong><br>
+                {{ service.numeroLong }}
+                {% if service.numeroCourt2 != null and service.numeroLong2 != null %}
+                <br>
+                <strong>{{ service.numeroCourt2 }}</strong><br>
+                {{ service.numeroLong2 }}
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

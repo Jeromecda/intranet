@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function gardes_et_astreintes_theme($existing, $type, $theme, $path) {
+  return [
+    'gardes_et_astreintes' => [
+      'variables' => ['var' => NULL],
+    ],
+  ];
+}

@@ -1,0 +1,7 @@
+name: Services
+core_version_requirement: ^8 || ^9
+type: module
+package: Mes Modules
+description: Une bloc pour la page Services en ligne
+dependencies:
+  - drupal:block

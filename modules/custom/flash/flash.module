@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function flash_theme($existing, $type, $theme, $path) {
+  return [
+    'tpl' => [
+      'variables' => [
+        'flash1' => NULL,
+        'lien_flash1' => NULL,
+        'flash2' => NULL,
+        'lien_flash2' => NULL,
+        'flash3' => NULL,
+        'lien_flash3' => NULL,      
+      ],
+    ],
+  ];
+}
